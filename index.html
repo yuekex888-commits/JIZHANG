@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>镜像网站 - 本地运行版</title>
+    <style>
+        /* 消除默认边距，使页面无缝填充浏览器窗口 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* 容器样式 */
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        /* 嵌入网页的样式 */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* 加载提示（当网速较慢时显示） */
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            color: #666;
+            z-index: -1; /* 放在 iframe 下方 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 提示信息 -->
+        <div class="loading">正在加载镜像内容，请稍候...</div>
+        
+        <!-- 嵌入源网站 -->
+        <iframe 
+            src="http://110.42.136.125/progect/WIICvDHgMWmrWauiTaLJ/index.html" 
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            importance="high">
+        </iframe>
+    </div>
+
+</body>
+</html>
